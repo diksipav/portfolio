@@ -11,7 +11,7 @@ const Home = () => (
       justifyContent: "center",
       alignItems: "center",
       width: "100%",
-      pb: "280px",
+      pb: "200px",
     }}
   >
     <div>

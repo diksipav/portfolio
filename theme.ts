@@ -1,5 +1,3 @@
-import { callbackify } from "util";
-
 const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -14,7 +12,7 @@ const theme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.25,
+    heading: 1.35,
   },
   colors: {
     text: "#0D0F0F",
@@ -22,6 +20,9 @@ const theme = {
     primary: "46857D",
     secondary: "28C0AD",
   },
+
+  breakpoints: ["340px", "768px", "1024px"],
+
   styles: {
     root: {
       fontFamily: "body",
@@ -33,7 +34,8 @@ const theme = {
       fontFamily: "heading",
       lineHeight: "heading",
       fontWeight: "heading",
-      fontSize: "52px",
+      fontSize: ["42px", "48px", "52px"],
+      margin: ["12px 0", "20px 0"],
     },
     h2: {
       color: "text",
@@ -61,7 +63,7 @@ const theme = {
       fontFamily: "heading",
       lineHeight: "heading",
       fontWeight: "500",
-      fontSize: "28px",
+      fontSize: ["19px", "22px", "26px", "30px"],
     },
     h6: {
       color: "text",
