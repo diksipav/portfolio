@@ -15,10 +15,10 @@ const theme = {
     heading: 1.35,
   },
   colors: {
-    text: "#0D0F0F",
-    background: "#EAF2F1",
-    primary: "46857D",
-    secondary: "28C0AD",
+    text: "#111b1a",
+    background: "#deebe9",
+    primary: "#65a098",
+    secondary: "#3e645f",
   },
 
   breakpoints: ["340px", "768px", "1024px"],
