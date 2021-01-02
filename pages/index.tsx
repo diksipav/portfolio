@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 
 export default () => (
-  <div sx={{ height: `calc(100vh - 70px)` }}>
+  <div sx={{ height: `calc(100vh - 130px)` }}>
     <div
       sx={{
         variant: "containers.page",
