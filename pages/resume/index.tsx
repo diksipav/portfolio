@@ -1,7 +1,5 @@
 /** @jsx jsx */
-import { isAbsolute } from "path";
-import { jsx } from "theme-ui";
-import { Grid } from "theme-ui";
+import { jsx, Grid } from "theme-ui";
 
 const Resume = ({ resume }) => {
   const { overview, sections } = resume[0];
