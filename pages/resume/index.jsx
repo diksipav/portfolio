@@ -53,7 +53,8 @@ const Resume = ({ resume }) => {
 export default Resume;
 
 export const getStaticProps = async () => {
-  const response = await fetch(`${process.env.STRAPI_URL}/resumes`);
+  const strapiUrl = process.env.STRAPI_URL;
+  const response = await fetch(`${strapiUrl}/resumes`);
   const resume = await response.json();
 
   if (!resume) {
