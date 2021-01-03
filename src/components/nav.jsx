@@ -107,10 +107,13 @@ const Nav = () => {
             height: "100vh",
             width: "100%",
             zIndex: 3,
-            opacity: "0.94",
+            background: `linear-gradient(
+              rgba(62, 100, 95, 0.8), 
+              rgba(62, 100, 95, 0.8))
+              ,url(profile-bg.jpg)`,
+            backgroundSize: "cover",
             top: 0,
             left: 0,
-            background: "#3e645f",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",

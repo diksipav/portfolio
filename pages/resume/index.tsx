@@ -53,7 +53,7 @@ const Resume = ({ resume }) => {
 export default Resume;
 
 export const getStaticProps = async () => {
-  const response = await fetch("http://localhost:1337/resumes");
+  const response = await fetch(`${process.env.STRIPE_URL}/resumes`);
   const resume = await response.json();
 
   if (!resume) {
