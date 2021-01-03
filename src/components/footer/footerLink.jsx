@@ -1,14 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-interface LinkProps {
-  href: string;
-  src: string;
-  srcOnHover: string;
-  alt: string;
-}
-
-const FooterLink: React.FC<LinkProps> = ({ href, src, srcOnHover, alt }) => (
+const FooterLink = ({ href, src, srcOnHover, alt }) => (
   <a href={href}>
     <img
       sx={{
@@ -16,10 +9,10 @@ const FooterLink: React.FC<LinkProps> = ({ href, src, srcOnHover, alt }) => (
       }}
       src={src}
       alt={alt}
-      onMouseOver={(e): void => {
+      onMouseOver={(e) => {
         srcOnHover && (e.currentTarget.src = srcOnHover);
       }}
-      onMouseOut={(e): void => {
+      onMouseOut={(e) => {
         srcOnHover && (e.currentTarget.src = src);
       }}
     />

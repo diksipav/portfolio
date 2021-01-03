@@ -17,5 +17,5 @@
     "forceConsistentCasingInFileNames": true
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.jsx", "pages/home/index.tsx", "src/components/nav.jsx", "pages/index.tsx", "src/components/footer/footer.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.jsx", "pages/home/index.jsx", "src/components/nav.jsx", "pages/index.jsx", "src/components/footer/footer.jsx", "src/components/footer/footerLink.jsx", "pages/_app.jsx"]
 }
