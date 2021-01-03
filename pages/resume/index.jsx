@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Grid } from "theme-ui";
-import { STRAPI_URL } from "../../envVars";
 
 const Resume = ({ resume }) => {
   const { overview, sections } = resume[0];
@@ -54,7 +53,7 @@ const Resume = ({ resume }) => {
 export default Resume;
 
 export const getStaticProps = async () => {
-  const response = await fetch(`${STRAPI_URL}/resumes`);
+  const response = await fetch(`${process.env.STRAPI_URL}/resumes`);
   const resume = await response.json();
 
   if (!resume) {
