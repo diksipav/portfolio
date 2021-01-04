@@ -53,7 +53,7 @@ const Resume = ({ resume }) => {
 export default Resume;
 
 export const getStaticProps = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/resumes`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/resumes`);
   const resume = await response.json();
 
   if (!resume) {
