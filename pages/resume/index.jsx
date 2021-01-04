@@ -52,16 +52,8 @@ const Resume = ({ resume }) => {
 
 export default Resume;
 
-export const getStaticProps = async () => {
-  // TODO: Fix this when you find the solution for absolute paths.
-  let strapiDbUrl;
-  if (process.env.NODE_ENV === "production") {
-    strapiDbUrl = "https://dijanapavlovic.herokuapp.com/resumes";
-  } else {
-    strapiDbUrl = "http://localhost:1337/resumes";
-  }
-
-  const response = await fetch(strapiDbUrl);
+export async function getStaticProps() {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/resumes`);
   const resume = await response.json();
 
   if (!resume) {
@@ -74,4 +66,4 @@ export const getStaticProps = async () => {
     props: { resume },
     revalidate: 360,
   };
-};
+}
