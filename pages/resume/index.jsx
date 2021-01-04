@@ -52,7 +52,7 @@ const Resume = ({ resume }) => {
 
 export default Resume;
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/resumes`);
   const resume = await response.json();
 
@@ -66,4 +66,4 @@ export const getStaticProps = async () => {
     props: { resume },
     revalidate: 360,
   };
-};
+}
