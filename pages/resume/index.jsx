@@ -9,28 +9,32 @@ const Resume = ({ resume }) => {
       sx={{
         variant: "containers.page",
         justifyContent: "flex-start",
+        maxWidth: "1200px",
+        margin: "auto",
       }}
     >
-      <Grid columns={[[1], [1], [1], [2]]} gap={4}>
-        <p sx={{ variant: "styles.p", p: "0 20px 30px " }}>{overview}</p>
-      </Grid>
-
-      <Grid columns={[[1], [1], [1], [2]]} gap={4} sx={{ pb: "66px" }}>
-        {sections.map((section) => (
-          <div key={section.title} sx={{ variant: "containers.section" }}>
-            <p
-              sx={{
-                variant: "styles.h3",
-                position: "absolute",
-                top: ["-39px", "-39px", "-39px", "-40px"],
-                left: ["20px"],
-              }}
-            >
-              {section.title}
-            </p>
+      <p sx={{ variant: "styles.p", p: "0 0 20px" }}>{overview}</p>
+      {sections.map((section) => (
+        <div sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
+          <h3
+            sx={{
+              variant: "styles.h3",
+              marginY: "12px",
+            }}
+          >
+            {section.title}
+          </h3>
+          <div
+            key={section.title}
+            sx={{
+              variant: "containers.section",
+              paddingTop: 0,
+              marginBottom: "30px",
+            }}
+          >
             {section.items.map((item, index) => (
               <Grid
-                columns={[[1], [1], [1], [2, "1fr 2fr"]]}
+                columns={[[1], [1], [1], [1, "1fr 2fr"]]}
                 gap={3}
                 sx={{ padding: "10px 0" }}
                 key={`${item.title}-${index}`}
@@ -44,8 +48,8 @@ const Resume = ({ resume }) => {
               </Grid>
             ))}
           </div>
-        ))}
-      </Grid>
+        </div>
+      ))}
     </main>
   );
 };

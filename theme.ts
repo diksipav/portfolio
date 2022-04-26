@@ -103,7 +103,7 @@ const theme = {
       justifyContent: "center",
     },
     page: {
-      height: "calc(100vh - 120px)",
+      minHeight: "calc(100vh - 120px)",
       m: 0,
       p: "20px",
       flexGrow: 1,
@@ -112,7 +112,7 @@ const theme = {
       justifyContent: "center",
       alignItems: "center",
       width: "100%",
-      padding: ["20px", "20px", "40px"],
+      padding: ["20px", "20px", "60px"],
     },
     link: {
       margin: "0 20px",
