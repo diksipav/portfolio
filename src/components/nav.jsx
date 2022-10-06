@@ -53,11 +53,11 @@ const Nav = () => {
             ></img>
           </a>
         </Link>
-        <Link href="/blog">
+        {/* <Link href="/blog">
           <a sx={{ variant: "containers.link" }}>blog</a>
-        </Link>
+        </Link> */}
         <div sx={{ width: "40%", textAlign: "end" }}>
-          <Link href="/about">
+          {/*} <Link href="/about">
             <a
               sx={{
                 variant: "containers.link",
@@ -66,8 +66,8 @@ const Nav = () => {
             >
               about
             </a>
-          </Link>
-          <Link href="/projects">
+          </Link> 
+           <Link href="/projects">
             <a
               sx={{
                 variant: "containers.link",
@@ -75,8 +75,8 @@ const Nav = () => {
               }}
             >
               projects
-            </a>
-          </Link>
+            </a> 
+           </Link> */}
           <Link href="/resume">
             <a
               sx={{
@@ -136,7 +136,7 @@ const Nav = () => {
           >
             home
           </a>
-          <a
+          {/* <a
             sx={{ variant: "containers.linkLight" }}
             onClick={(e) => closeNavScreen(e, "/blog")}
           >
@@ -155,7 +155,7 @@ const Nav = () => {
             }}
           >
             projects
-          </a>
+          </a> */}
           <a
             onClick={(e) => closeNavScreen(e, "/resume")}
             sx={{
